@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 
 ############################################################
 gem 'rspec-rails', '~> 3.5'
+gem 'rest-client'
+gem 'webmock'
 ############################################################
 
 # Use CoffeeScript for .coffee assets and views
