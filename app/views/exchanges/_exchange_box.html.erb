@@ -17,10 +17,15 @@
             <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
           </div>
         </div>
-                    
+        
+        <button type="button" class="btn btn-light center-block" style="width:210px; height:60px; padding-bottom:10px" onclick="ChangeValues">
+          <img src="/change.png" style="height:50px"/>
+        </button>
+        
         <div class='destination_currency'>
           <div class='form-group'>
-            <p class='title'>Moeda Pretendida</p>
+          
+            <p class='title' style='padding-top:15px'>Moeda Pretendida</p>
             <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency'%>
           </div>
           <div class='form-group'>

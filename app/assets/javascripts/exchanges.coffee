@@ -1,10 +1,12 @@
 $(document).ready ->
 
-  $('#revert_selection').click ->
+  $('#submit_noClick').click ->
     currency_source= $('#source_currency').val()
     currency_target= $('#target_currency').val()
-    $('#source_currency').val(currency_target)
-    $('#target_currency').val(currency_source)
+    #$('#source_currency').val(currency_target)
+    #$('#target_currency').val(currency_source)
+    $('#source_currency').val(currency_source)
+    $('#target_currency').val(currency_target)
     $('form').submit()
 
   $('#amount').bind 'keyup', ->
@@ -12,6 +14,26 @@ $(document).ready ->
     return
 
 
+  $('button').click () ->
+    aux = $('#source_currency').val()
+    aux2 = $('#target_currency').val()
+    $('#source_currency').val(aux2)
+    $('#target_currency').val(aux)
+    $('form').submit()
+    #return
+    #aux = $('#source_currency').text()
+    #$('#source_currency').text('#target_currency')
+    #$('#target_currency').text(aux)
+    
+
+
+#$(ChangeValues) ->
+#('#ChangeValues').submit ->
+#  aux: $("#source_currency").val()
+#  currency_source: $("target_currency").val()
+#  target_currency: aux
+#  amount: $("#amount").val()
+#  return
 
 
   $('form').submit ->
@@ -31,3 +53,6 @@ $(document).ready ->
             $('#result').val(data.value)
         
         return false;
+
+
+
