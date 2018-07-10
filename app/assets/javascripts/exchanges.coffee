@@ -22,7 +22,7 @@ $(document).ready ->
     $('form').submit()
     #return
     
-    
+
 
   $('form').submit ->
     event.preventDefault();
