@@ -25,7 +25,7 @@ $(document).ready ->
 
 
   $('form').submit ->
-    event.preventDefault();
+    #event.preventDefault();
     if $('form').attr('action') == '/convert'
       $.ajax '/convert',
           type: 'GET'
